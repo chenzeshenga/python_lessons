@@ -4,10 +4,15 @@
 # @File     :   localvarible.py
 # @Software :   PyCharm
 
+b = "global"
+
 
 def test1():
     a = 200
     print(a)
+    global b
+    b = "local"
+    print(b)
 
 
 # print(a)
