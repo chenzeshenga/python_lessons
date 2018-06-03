@@ -21,15 +21,19 @@ def add_student():
     stu["age"] = age
     stu["qq"] = qq
     stus.append(stu)
-
     print("success")
+
+
+def del_student(name):
+    student = query_student(name)
+    stus.remove(student)
 
 
 def query_student(name):
     for stu in stus:
         if stu["name"] == name.strip():
             print(stu)
-            break
+            return stu
     else:
         print("can't fine name %s" % name)
 
@@ -44,5 +48,8 @@ while True:
     elif operate == "2":
         name = input("name=")
         query_student(name)
+    elif operate == "3":
+        name = input("name=")
+        del_student(name)
     else:
         break
