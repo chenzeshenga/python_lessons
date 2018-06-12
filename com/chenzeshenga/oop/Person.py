@@ -19,6 +19,10 @@ class Person:
     def work(self):
         print("work")
 
+    def __str__(self):
+        return "to string"
+
 
 # p1 = Person()
 p2 = Person("abd", 99)
+print(p2)
